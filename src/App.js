@@ -10,8 +10,8 @@ function App() {
   return (
     <>
       <Router>
+      
         <NavBar />
-
         <div className="pages">
           <Switch>
             <Route exact path="/" component={Home} />
@@ -20,6 +20,7 @@ function App() {
             <Route path="/about" component={About} />
           </Switch>
         </div>
+        
       </Router>
     </>
   );
