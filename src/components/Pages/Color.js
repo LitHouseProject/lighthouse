@@ -1,15 +1,29 @@
 import React, { useState } from "react";
-import { SketchPicker } from 'react-color';
-
+import ReactColorPicker from "@super-effective/react-color-picker";
+import Tippy from "@tippyjs/react";
+import '../../css/color.css';
 
 export const Color = () => {
-  const [color, setColor] = useState("red");
-  
+  const [selectedColor, setSelectedColor] = useState('#3cd6bf');
+
+  const onColorChange = (updatedColor) => {
+    setSelectedColor(updatedColor);
+  };
 
   return (
-    <SketchPicker 
-		color={color}
-		disableAlpha={true}
-		onChange={updatedColor => setColor(updatedColor.hex)}/>
-  );
+    <div className='app'>
+      <h3>PICK YOUR COLOR</h3>
+      <div className='circle' style={{ backgroundColor: selectedColor }}>
+      </div>
+
+      <Tippy interactive={true} placement={'bottom'} content={
+        <ReactColorPicker 
+          color={ selectedColor }
+          onChange={ onColorChange }
+        />
+      }>
+        <button className='ref-button'>Change Box Color</button>
+      </Tippy>
+    </div>
+  )
 };

@@ -6,6 +6,7 @@ import { Color } from "./components/Pages/Color";
 import { Pattern } from "./components/Pages/Pattern";
 import { About } from "./components/Pages/About";
 
+
 function App() {
   return (
     <>
@@ -24,6 +25,7 @@ function App() {
       </Router>
     </>
   );
+
 }
 
 export default App;
