@@ -10,10 +10,9 @@ function NavBar() {
     <>
       <nav className="navbar">
         <div className="nav-container">
-          <img src= {logo} className="nav-teamlogo" width="50" height="50" />
+          <img src= {logo} className="nav-teamlogo" width="50" height="50" alt='Senior Design Logo' />
           <NavLink exact to="/" className="nav-logo">
             LightHouse
-            {/* <i className="fas fa-code"></i> */}
           </NavLink>
 
           <ul className={click ? "nav-menu active" : "nav-menu"}>

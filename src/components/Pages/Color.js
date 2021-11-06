@@ -15,7 +15,7 @@ export const Color = () => {
       <h3>PICK YOUR COLOR</h3>
       
       <div className='circle' style={{ backgroundColor: selectedColor }}>
-        <img src= {logo} className="bulblogo"/>
+        <img src= {logo} className="bulb" alt='color light bulb'/>
       </div>
       
       <Tippy interactive={true} placement={'bottom'} content={
