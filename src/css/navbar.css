@@ -22,9 +22,11 @@
   height: 80px;
   max-width: 1500px;
 }
+
 .nav-teamlogo {
   padding-left: 20px;
 }
+
 .nav-logo {
   color: #000000;
   align-items: center;
@@ -49,6 +51,7 @@
   height: 100%;
   border-bottom: 3px solid transparent;
 }
+
 .fa-code {
   margin-left: 1rem;
 }
@@ -102,10 +105,12 @@
     z-index: 1;
     margin-top: 0px;
   }
+
   .nav-item .active {
     color: #000000;
     border: none;
   }
+
   .nav-links {
     padding: 1.5rem;
     width: 100%;
