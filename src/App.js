@@ -1,10 +1,10 @@
 import "./App.css";
 import NavBar from "./components/Navbar/NavBar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Home } from "./components/Pages/Home";
-import { Color } from "./components/Pages/Color";
-import { Pattern } from "./components/Pages/Pattern";
-import { About } from "./components/Pages/About";
+import { Home } from "./Pages/Home";
+import { Color } from "./Pages/Color";
+import { About } from "./Pages/About";
+import PatternPage  from './Pages/pattern/pattern.component'
 
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/color" component={Color} />
-            <Route path="/function" component={Pattern} />
+            <Route path="/pattern" component={PatternPage} />
             <Route path="/about" component={About} />
           </Switch>
         </div>
