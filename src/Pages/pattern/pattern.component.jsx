@@ -5,7 +5,13 @@ import './pattern.syles.scss'
 const PatternPage = () => (
     <div className='pattern-page'>
         <PatternPreview />
+        <div className='btn'>
+            <a href="/" class="button1">Previous</a>
+            <a href="" class="button2">Submit</a>
+        </div>
     </div>
+    
+    
 )
 
 export default PatternPage;

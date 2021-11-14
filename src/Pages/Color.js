@@ -12,6 +12,7 @@ export const Color = () => {
 
   return (
     <div className='app'>
+      
       <h3>PICK YOUR COLOR</h3>
       
       <div className='circle' style={{ backgroundColor: selectedColor }}>
@@ -26,7 +27,9 @@ export const Color = () => {
       }>
         <button className='ref-button'>Change Box Color</button>
       </Tippy>
-      
+      <div className='btn'>
+        <a href="/pattern" class="button1">Next</a>
+      </div>
     </div>
   )
 };

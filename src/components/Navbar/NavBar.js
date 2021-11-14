@@ -11,7 +11,7 @@ function NavBar() {
       <nav className="navbar">
         <div className="nav-container">
           <img src= {logo} className="nav-teamlogo" width="70" height="50" alt='Senior Design Logo' />
-          <NavLink exact to="/color" className="nav-logo">
+          <NavLink exact to="/" className="nav-logo">
             LightHouse
           </NavLink>
 
@@ -41,7 +41,7 @@ function NavBar() {
             <li className="nav-item">
               <NavLink
                 exact
-                to="/color"
+                to="/"
                 activeClassName="active"
                 className="nav-links"
                 onClick={handleClick}
