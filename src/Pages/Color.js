@@ -26,6 +26,7 @@ export const Color = () => {
       }>
         <button className='ref-button'>Change Box Color</button>
       </Tippy>
+      
     </div>
   )
 };

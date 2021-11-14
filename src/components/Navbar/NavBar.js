@@ -10,13 +10,13 @@ function NavBar() {
     <>
       <nav className="navbar">
         <div className="nav-container">
-          <img src= {logo} className="nav-teamlogo" width="50" height="50" alt='Senior Design Logo' />
+          <img src= {logo} className="nav-teamlogo" width="70" height="50" alt='Senior Design Logo' />
           <NavLink exact to="/color" className="nav-logo">
             LightHouse
           </NavLink>
 
           <ul className={click ? "nav-menu active" : "nav-menu"}>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <NavLink
                 exact
                 to="/"
@@ -37,7 +37,7 @@ function NavBar() {
               >
                 About
               </NavLink>
-            </li>
+            </li> */}
             <li className="nav-item">
               <NavLink
                 exact
