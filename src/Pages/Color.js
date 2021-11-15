@@ -22,6 +22,7 @@ export const Color = ({selectedColor, setSelectedColor}) => {
       }>
         <button className='ref-button'>Change Box Color</button>
       </Tippy>
+      
     </div>
   )
 };

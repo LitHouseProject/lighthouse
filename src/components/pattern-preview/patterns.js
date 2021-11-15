@@ -33,25 +33,25 @@ const DIFF_PATTERNS = [
         id: 6,
         name: 'saphire wave',
         imageUrl: '/pattern-img/multicolor-strip.jpg'
-    },
-
-    {
-        id: 7,
-        name: 'saphire wave',
-        imageUrl: '/pattern-img/multicolor-strip.jpg'
-    },
-
-    {
-        id: 8,
-        name: 'saphire wave',
-        imageUrl: '/pattern-img/multicolor-strip.jpg'
-    },
-
-    {
-        id: 9,
-        name: 'saphire wave',
-        imageUrl: '/pattern-img/multicolor-strip.jpg'
     }
+
+    // {
+    //     id: 7,
+    //     name: 'saphire wave',
+    //     imageUrl: '/pattern-img/multicolor-strip.jpg'
+    // },
+
+    // {
+    //     id: 8,
+    //     name: 'saphire wave',
+    //     imageUrl: '/pattern-img/multicolor-strip.jpg'
+    // },
+
+    // {
+    //     id: 9,
+    //     name: 'saphire wave',
+    //     imageUrl: '/pattern-img/multicolor-strip.jpg'
+    // }
 ]
 
 export default DIFF_PATTERNS;
