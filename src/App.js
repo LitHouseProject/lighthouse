@@ -3,7 +3,7 @@ import NavBar from "./components/Navbar/NavBar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Color } from "./Pages/Color";
 import PatternPage  from './Pages/pattern/pattern.component';
-import React, { useEffect, useState, createContext, useRef } from 'react';
+import React, { useState, createContext } from 'react';
 
 export const AppPatternContext = createContext('');
 
@@ -19,27 +19,6 @@ function App() {
   const updateSelectedColor = (updatedColor) => {
     setColor(updatedColor);
   };
-
-  // send json object to backend
-  // useEffect( () => {
-  //   fetch('/api', {
-  //     method: 'POST',
-  //     headers: {
-  //       'Content-Type': 'application/json;charset=utf-8'
-  //     },
-  //     'body': JSON.stringify({
-  //       'color': selectedColor,
-  //       'pattern': selectedPattern
-  //     })
-  //   })
-  //   .then(
-  //     response => {
-  //       if (response.ok) {
-  //         return response.json();
-  //       }
-  //     }
-  //   )
-  // }, []);
 
   return (
     <>

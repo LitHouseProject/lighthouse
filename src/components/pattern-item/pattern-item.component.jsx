@@ -3,8 +3,7 @@ import { AppPatternContext } from '../../App';
 import './pattern-item.styles.scss';
 
 const PatternItem = ({ name, imageUrl }) => {
-    const {selectedPattern, setPattern} = useContext(AppPatternContext);
-    console.log(selectedPattern.current);
+    const {setPattern} = useContext(AppPatternContext);
 
     return (
         <div className='large pattern-item' onClick={() => setPattern(name)}>
