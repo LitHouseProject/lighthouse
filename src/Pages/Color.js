@@ -1,7 +1,8 @@
-
 import ReactColorPicker from "@super-effective/react-color-picker";
 import Tippy from "@tippyjs/react";
 import '../css/color.css';
+
+import { Link } from "react-router-dom";
 
 
 export const Color = ({selectedColor, setSelectedColor}) => {
@@ -24,7 +25,7 @@ export const Color = ({selectedColor, setSelectedColor}) => {
         <button className='ref-button'>Change Box Color</button>
       </Tippy>
       <div className='btn'>
-        <a href="/pattern" class="button1">Next</a>
+        <Link to='/pattern' className='button1'>Next</Link>
       </div>
     </div>
   )

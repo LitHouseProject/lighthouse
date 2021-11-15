@@ -10,7 +10,7 @@ export const AppPatternContext = createContext('');
 function App() {
 
   const [selectedColor, setColor] = useState('3cd6bf');
-  const [selectedPattern, setPattern] = useState('Color Wipe');
+  const [selectedPattern, setPattern] = useState('KID CUDI');
 
   const updateSelectedPattern = (updatedPattern) => {
     setPattern(updatedPattern);

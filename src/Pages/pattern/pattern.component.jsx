@@ -1,4 +1,4 @@
-import React, {useContext, useState, useEffect} from 'react';
+import React, {useContext} from 'react';
 import CustomButton from '../../components/custom-button/custom-button.component';
 import PatternPreview from '../../components/pattern-preview/pattern-preview.component';
 import { AppPatternContext } from '../../App';
@@ -6,33 +6,27 @@ import './pattern.syles.scss'
 
 const PatternPage = () => {
     const {selectedColor, selectedPattern} = useContext(AppPatternContext);
-    const [submitClicked, setSubmitClicked] = useState(false);  
-
-    useEffect(() => {
-      fetch(
-        '/api', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json;charset=utf-8'
-          },
-          'body': JSON.stringify({
-            'color': selectedColor,
-            'pattern': selectedPattern
-          })
-        })
-        .then(
-          response => {
-            if (response.ok) {
-              return response.json();
-            }
-          }
-        )
-    }, [submitClicked]);
-
 
     const onClickSubmit = (event) => {
         event.preventDefault();
-        setSubmitClicked(!submitClicked);  
+        fetch(
+          '/api', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json;charset=utf-8'
+            },
+            'body': JSON.stringify({
+              'color': selectedColor,
+              'pattern': selectedPattern
+            })
+          })
+          .then(
+            response => {
+              if (response.ok) {
+                return response.json();
+              }
+            }
+          ) 
     };
 
     return (
