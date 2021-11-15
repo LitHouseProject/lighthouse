@@ -1,8 +1,13 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import { AppPatternContext } from '../../App';
 import './pattern-item.styles.scss';
 
-const PatternItem = ({ name, imageUrl }) => (
-    <div className='large pattern-item' onClick={() => console.log(name)}>
+const PatternItem = ({ name, imageUrl }) => {
+    const {selectedPattern, setPattern} = useContext(AppPatternContext);
+    console.log(selectedPattern.current);
+
+    return (
+        <div className='large pattern-item' onClick={() => setPattern(name)}>
         <div
             className='image'
             style={{
@@ -14,6 +19,7 @@ const PatternItem = ({ name, imageUrl }) => (
             <h1 className='title'>{ name.toUpperCase() }</h1>
         </div>
     </div>
-);
+    );    
+};
 
 export default PatternItem;

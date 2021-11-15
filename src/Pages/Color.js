@@ -1,27 +1,23 @@
-import React, { useState } from "react";
+
 import ReactColorPicker from "@super-effective/react-color-picker";
 import Tippy from "@tippyjs/react";
 import '../css/color.css';
-import logo from '../images/bulblogo250px.png'
-export const Color = () => {
-  const [selectedColor, setSelectedColor] = useState('#3cd6bf');
 
-  const onColorChange = (updatedColor) => {
-    setSelectedColor(updatedColor);
-  };
 
+export const Color = ({selectedColor, setSelectedColor}) => {
+  console.log(selectedColor);
   return (
     <div className='app'>
       <h3>PICK YOUR COLOR</h3>
       
       <div className='circle' style={{ backgroundColor: selectedColor }}>
-        {/*<img src= {logo} className="bulb" alt='color light bulb'/>*/}
       </div>
       
       <Tippy interactive={true} placement={'bottom'} content={
         <ReactColorPicker 
+          name={'color'}
           color={ selectedColor }
-          onChange={ onColorChange }
+          onChange={ setSelectedColor }
         />
       }>
         <button className='ref-button'>Change Box Color</button>

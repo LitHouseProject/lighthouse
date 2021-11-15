@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "../../css/navbar.css";
-import logo from "../../images/weblogo.png"
+import logo from "../../images/weblogo.png";
+
+
 function NavBar() {
   const [click, setClick] = useState(false);
-
   const handleClick = () => setClick(!click);
+
+
   return (
     <>
       <nav className="navbar">
@@ -20,28 +23,6 @@ function NavBar() {
               <NavLink
                 exact
                 to="/"
-                activeClassName="active"
-                className="nav-links"
-                onClick={handleClick}
-              >
-                Home
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink
-                exact
-                to="/about"
-                activeClassName="active"
-                className="nav-links"
-                onClick={handleClick}
-              >
-                About
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink
-                exact
-                to="/color"
                 activeClassName="active"
                 className="nav-links"
                 onClick={handleClick}
