@@ -15,8 +15,8 @@ function App() {
         <NavBar />
         <div className="pages">
           <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/color" component={Color} />
+            {/* <Route exact path="/" component={Home} /> */}
+            <Route exact path="/" component={Color} />
             <Route path="/pattern" component={PatternPage} />
             <Route path="/about" component={About} />
           </Switch>
