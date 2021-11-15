@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@300&family=Yuji+Syuku&display=swap');
 .app {
     display: flex;
     flex-direction: column;
@@ -5,6 +6,42 @@
     align-items: center;
     background-color: whitesmoke;
     padding-bottom: 100px;
+}
+
+.btn {
+    font-family: 'Roboto', sans-serif;
+    display: inline-block;
+    margin-top: 70px;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    transition: all 0.2s;
+    
+}
+
+.button1{
+    padding:0.35em 1.2em;
+    border: 1px solid rgb(157, 151, 151);
+    font-weight: 500;
+    color: #423842;
+    text-decoration: none;
+    background-color: rgb(202, 197, 190);
+}
+
+.button2 {
+    padding:0.35em 1.2em;
+    border: 1px solid rgb(157, 151, 151);
+    font-weight: 600;
+    color: #423842;
+    text-decoration: none;
+    background-color: rgb(145, 232, 128);
+}
+
+.button1:hover {
+    border: 2px solid rgb(2, 2, 2);
+}
+
+.button2:hover {
+    border: 2px solid rgb(2, 2, 2);
 }
 
 .app h3 {
@@ -44,7 +81,7 @@
     height: 45px;
     background-color: rgb(243, 168, 71);
     border: 2px  #423842;
-    margin-top: 100px;
+    margin-top: 75px;
     margin-bottom: 50px;
 }
 
