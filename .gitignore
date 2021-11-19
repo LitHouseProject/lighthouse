@@ -17,6 +17,8 @@
 .env.development.local
 .env.test.local
 .env.production.local
+src/backend/lights/__pycache__
+src/backend/lights/neopixel_controller.pyc
 
 npm-debug.log*
 yarn-debug.log*
