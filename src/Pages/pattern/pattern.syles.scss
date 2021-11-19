@@ -1,12 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@300&family=Yuji+Syuku&display=swap');
 .pattern-page {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px 80px;
-
+    background-color: whitesmoke;
+    padding-bottom: 100px;
     .custom-button {
         align-self: center;
         margin-top: 30px;
+        border: 1px solid rgb(157, 151, 151);
+        font-weight: 600;
+        font-size: 17px;
+        color: #423842;
+        text-decoration: none;
+        background-color: rgb(192, 202, 190);
+    }
+    .custom-button:hover {
+        background-color: rgb(235, 66, 54);
+        border: 2px solid rgb(2, 2, 2);
     }
 }
 
