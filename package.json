@@ -2,7 +2,7 @@
   "name": "lighthouse",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://127.0.0.1:5000",
+  "proxy": "http://10.2.42.215:5000/",
   "dependencies": {
     "@super-effective/react-color-picker": "^2.1.2",
     "@testing-library/jest-dom": "^5.14.1",
@@ -17,7 +17,6 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "backend-server": "cd /backend/src run",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

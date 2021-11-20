@@ -13,19 +13,19 @@ const DIFF_PATTERNS = [
 
     {
         id: 3,
-        name: 'theater chase',
+        name: 'theater_chase',
         imageUrl: '/pattern-img/bed.jpg'
     },
 
     {
         id: 4,
-        name: 'color wipe',
+        name: 'color_wipe',
         imageUrl: '/pattern-img/living-room.jpg'
     },
 
     {
         id: 5,
-        name: 'fire red',
+        name: 'theater_chase_rainbow',
         imageUrl: '/pattern-img/room.jpg'
     },
 
