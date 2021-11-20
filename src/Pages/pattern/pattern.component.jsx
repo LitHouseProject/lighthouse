@@ -30,9 +30,9 @@ const PatternPage = () => {
     };
 
     return (
-        <div className='pattern-page'>
-            <CustomButton  onClick={onClickSubmit}>Submit</CustomButton>
+        <div className='pattern-page'>            
             <PatternPreview />
+            <CustomButton  onClick={onClickSubmit}>Submit</CustomButton>
         </div>
     );
 };
