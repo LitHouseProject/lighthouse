@@ -5,6 +5,7 @@ import os
 import signal
 import logging
 import time
+import numpy as np
 
 # LED strip configuration:
 LED_COUNT      = 300      # Number of LED pixels.
@@ -24,6 +25,7 @@ class StripController (object):
         self.stripObject        = neopixelObject            # Adafruit_Neopixel Object: Need it to pass to certain functions
         self.selectedPattern    = 'STRANDTEST'              # Selected Pattern: Pattern to be displayed
         self.selectedColor      = Color(0, 255, 0)          # Selected Color: Color to be displayed on LED lights 
+        self.stripObject.setBrightness(150)
         
         
     # Create a new process
@@ -36,8 +38,8 @@ class StripController (object):
     def turnOffLEDLights(self):
         self.stopExistingProcess()
         for i in range(self.stripObject.numPixels()):
-            strip.setPixelColor(i, Color(0, 0, 0))
-            strip.show()
+            self.stripObject.setPixelColor(i, Color(0, 0, 0))
+            self.stripObject.show()
             time.sleep(10.0/1000.0)
             
             
@@ -61,7 +63,7 @@ class StripController (object):
     
     def setColor(self, hexcode):
         rgb = ImageColor.getcolor(hexcode, 'RGB')
-        self.color = Color(rgb[0], rgb[1], rgb[2])
+        self.selectedColor = Color(rgb[0], rgb[1], rgb[2])
     
     def setPattern(self, newPattern):
         self.selectedPattern = newPattern
@@ -70,10 +72,13 @@ class StripController (object):
 
 def color_wipe(strip, color, forever, wait_ms=50):
     """Wipe color across display a pixel at a time."""
-    
     while forever >= 0: 
         for i in range(strip.numPixels()):
             strip.setPixelColor(i, color)
+            strip.show()
+            time.sleep(wait_ms/1000.0)
+        for i in range(strip.numPixels()):
+            strip.setPixelColor(i, 000000000)
             strip.show()
             time.sleep(wait_ms/1000.0)
         if forever == 0:
@@ -120,14 +125,13 @@ def rainbow(strip, color, forever, wait_ms=20, iterations=1):
             forever = -1
 
 
-def rainbow_cycle(strip, color, forever, wait_ms=20, iterations=5):
+def rainbow_wheel(strip, color, forever, wait_ms=20, iterations=5):
     """Draw rainbow that uniformly distributes itself across all pixels."""
     while forever >= 0:
         for j in range(256*iterations):
             for i in range(strip.numPixels()):
-                strip.setPixelColor(i, wheel((int(i * 256 / strip.numPixels()) + j) & 255))
+                strip.setPixelColor(i, wheel((int(i * 256 / strip.numPixels() * 20) + j) & 255))
             strip.show()
-            time.sleep(wait_ms/1000.0)
         
         if forever == 0:
             forever = -1
@@ -144,6 +148,55 @@ def theater_chase_rainbow(strip, color, forever, wait_ms=50):
                 for i in range(0, strip.numPixels(), 3):
                     strip.setPixelColor(i+q, 0)
 
+        if forever == 0:
+            forever = -1
+
+def solid_color(strip, color, forever, wait_ms=20):
+    """"set all lights to a solid color"""
+    while forever >= 0: 
+        for i in range(strip.numPixels()):
+            strip.setPixelColor(i, color)
+        strip.show()
+        if forever == 0:
+            forever = -1
+            
+
+def holiday_flicker(strip, color, forever, wait_ms=20):
+    """"set each light to a random color"""
+    while forever >= 0: 
+        for i in range(strip.numPixels()):
+            rand_color = np.random.choice(range(256), size=3)
+            color = int(Color(rand_color[0], rand_color[1], rand_color[2]))
+            strip.setPixelColor(i, color)
+        strip.show()
+        time.sleep(wait_ms/1000.0)
+        if forever == 0:
+            forever = -1
+
+def solid_random_color(strip, color, forever, wait_ms=20):
+    """"set all lights to a random color"""
+    while forever >= 0: 
+        rand_color = np.random.choice(range(256), size=3)
+        color = int(Color(rand_color[0], rand_color[1], rand_color[2]))
+        for i in range(strip.numPixels()):
+            strip.setPixelColor(i, color)
+        strip.show()
+        time.sleep(1)
+        if forever == 0:
+            forever = -1
+
+def pulse(strip, color, forever, wait_ms=20):
+    """"set all lights to a solid color"""
+    j=1
+    while forever >= 0: 
+        strip.setBrightness(j)
+        for i in range(strip.numPixels()):
+            strip.setPixelColor(i, color)
+        strip.show()
+        if j < 150:
+            j += 1
+        else:
+            j = 1
         if forever == 0:
             forever = -1
 

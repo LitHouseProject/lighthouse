@@ -7,7 +7,7 @@ const DIFF_PATTERNS = [
 
     {
         id: 2,
-        name: 'wheel',
+        name: 'solid_color',
         imageUrl: '/pattern-img/red.jpg'
     },
 
@@ -31,27 +31,35 @@ const DIFF_PATTERNS = [
 
     {
         id: 6,
-        name: 'saphire wave',
+        name: 'rainbow_wheel',
         imageUrl: '/pattern-img/multicolor-strip.jpg'
-    }
+    },
 
-    // {
-    //     id: 7,
-    //     name: 'saphire wave',
-    //     imageUrl: '/pattern-img/multicolor-strip.jpg'
-    // },
 
-    // {
-    //     id: 8,
-    //     name: 'saphire wave',
-    //     imageUrl: '/pattern-img/multicolor-strip.jpg'
-    // },
+    {
+        id: 7,
+        name: 'solid_random_color',
+        imageUrl: '/pattern-img/solid_random.png'
+    },
 
-    // {
-    //     id: 9,
-    //     name: 'saphire wave',
-    //     imageUrl: '/pattern-img/multicolor-strip.jpg'
-    // }
+    {
+        id: 8,
+        name: 'holiday_flicker',
+        imageUrl: '/pattern-img/holiday_flicker.jpeg'
+    },
+
+    {
+        id: 9,
+        name: 'pulse',
+        imageUrl: '/pattern-img/pulse.png'
+    },
+
+    {
+        id: 10,
+        name: 'TURN_OFF',
+        // imageUrl: '/pattern-img/multicolor-strip.jpg'
+    },
+
 ]
 
 export default DIFF_PATTERNS;
