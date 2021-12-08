@@ -1,7 +1,7 @@
 # lighthouse
 
--node and npm must be installed which can be installed at: https://nodejs.org/en/download/
--instructions are also shown in the Demo video.
+1. node and npm must be installed which can be installed at: https://nodejs.org/en/download/
+2. instructions are also shown in the Demo video.
 To run:
   1. In terminal in the main directory containing the JSON package run the command npm install
   2. Run the commans npm start, this will start the web server (front end)
